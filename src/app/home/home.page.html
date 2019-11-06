@@ -1,14 +1,88 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Ionic Image Cropper
     </ion-title>
+    <ion-buttons>
+      <ion-button fill="clear" color="danger" (click)="clear()">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" color="secondary" (click)="save()">
+        <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-button expand="full" (click)="captureImage()">
+    Capture image
+  </ion-button>
+
+  <image-cropper
+    [imageBase64]="myImage"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="4 / 3"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    outputType="base64">
+  </image-cropper>
+
+  <ion-row *ngIf="myImage">
+    <ion-col size="3">
+      <ion-button fill="outline" (click)="rotateLeft()">
+        <ion-icon name="refresh" slot="start"></ion-icon> Left
+      </ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button fill="outline" (click)="rotateRight()">
+        <ion-icon name="refresh" slot="start"></ion-icon> Right
+      </ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button fill="outline" (click)="flipHorizontal()">
+        Flip X
+      </ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button fill="outline" (click)="flipVertical()">
+        Flip Y
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="3">
+      <ion-button fill="clear" (click)="move(0, -10)">
+        <ion-icon name="arrow-round-up" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button fill="clear" (click)="move(0, 10)">
+        <ion-icon name="arrow-round-down" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button fill="clear" (click)="move(-10, 0)">
+        <ion-icon name="arrow-round-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button fill="clear" (click)="move(10, 0)">
+        <ion-icon name="arrow-round-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-card *ngIf="croppedImage">
+    <ion-card-header>
+      <ion-card-title>Cropped Image</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="croppedImage"/>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card-content>
+    <img src="../../assets/laptop_desk.jpg"/>
+  </ion-card-content>
+
 </ion-content>
