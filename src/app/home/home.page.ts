@@ -12,14 +12,12 @@ import { ImageCroppedEvent, ImageCropperComponent } from 'ngx-image-cropper';
 export class HomePage {
   myImage = null;
   croppedImage = null;
-  @ViewChild(ImageCropperComponent, { static: false }) angularCropper: ImageCropperComponent;
+  @ViewChild(ImageCropperComponent, { static: true }) angularCropper: ImageCropperComponent;
 
   constructor(private camera: Camera) {}
 
-  // src\assets\laptop-desk.jpg
   captureImage() {
-    const imagepath = 'src\assets\laptop-desk.jpg';
-    this.convertFileToDataURLviaFileReader(`assets/laptop_desk.jpg`).subscribe(
+    this.convertFileToDataURLviaFileReader(`assets/laptopdesk.jpg`).subscribe(
       base64 => {
         this.myImage = base64;
       }
