@@ -15,12 +15,11 @@ App created using the [Ionic 5 framework](https://ionicframework.com/docs) to cr
 
 ## General info
 
-* Uses the Cordova camera plugin, improved with the Ionic-native camera plugin.
+* Uses the Cordova camera plugin, improved with the Ionic-native camera plugin. For developement, a jpg image is used instead of the camera image. 
 
 ## Screenshots
 
-![image](./img/.png)
-![image](./img/.png)
+![image](./img/cropper.png)
 
 ## Technologies
 
@@ -29,6 +28,8 @@ App created using the [Ionic 5 framework](https://ionicframework.com/docs) to cr
 * [Angular v8.1.2](https://angular.io/)
 
 * [Ionic/angular v4.7.1](https://www.npmjs.com/package/@ionic/angular)
+
+* [Angular RxJS Library v6.5.1](https://angular.io/guide/rx-library)
 
 * [ngx Image Cropper v2.0.2](https://github.com/Mawi137/ngx-image-cropper)
 
@@ -65,6 +66,8 @@ rotateRight() {
 * [Simon Grimm´s Youtube video: How to Crop Images in Ionic 4 with CropperJS](https://www.youtube.com/watch?v=UnqVkzWg2W0)
 
 * [Nappd: How to add Image Cropper in ionic 4 app](https://enappd.com/blog/how-to-add-image-cropper-in-ionic-4-app/68/)
+
+* [Adding Image Cropper in Ionic 4 Apps](https://medium.com/enappd/image-cropper-in-ionic-4-7b76f1153ad9)
 
 ## Contact
 

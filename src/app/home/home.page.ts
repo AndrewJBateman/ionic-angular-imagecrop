@@ -12,37 +12,37 @@ import { ImageCroppedEvent, ImageCropperComponent } from 'ngx-image-cropper';
 export class HomePage {
   myImage = null;
   croppedImage = null;
-  @ViewChild(ImageCropperComponent, { static: true }) angularCropper: ImageCropperComponent;
+  @ViewChild(ImageCropperComponent, { static: false }) angularCropper: ImageCropperComponent;
 
   constructor(private camera: Camera) {}
 
   captureImage() {
-    this.convertFileToDataURLviaFileReader(`assets/laptopdesk.jpg`).subscribe(
-      base64 => {
-        this.myImage = base64;
-      }
+    this.convertFileToDataURLviaFileReader(`assets\Ramen.jpg`).subscribe(base64 => {
+      // this.convertFileToDataURLviaFileReader(`http://localhost:4200/home/assets/Ramen.gif`).subscribe(base64 => {
+      this.myImage = base64;
+    }
     );
 
-    // const options: CameraOptions = {
-    //   quality: 100,
-    //   destinationType: this.camera.DestinationType.DATA_URL,
-    //   encodingType: this.camera.EncodingType.JPEG,
-    //   mediaType: this.camera.MediaType.PICTURE,
-    //   sourceType: this.camera.PictureSourceType.CAMERA
-    // }
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      sourceType: this.camera.PictureSourceType.CAMERA
+    }
 
-    // this.camera.getPicture(options).then((imageData) => {
-    //   this.myImage = 'data:image/jpeg;base64,'+ ImageData;
-    // });
+    this.camera.getPicture(options).then((imageData) => {
+      this.myImage = 'data:image/jpeg;base64,', +ImageData;
+    });
   }
 
   // function to convert to base64 file
   convertFileToDataURLviaFileReader(url: string) {
     return Observable.create(observer => {
       let xhr: XMLHttpRequest = new XMLHttpRequest();
-      xhr.onload = function() {
+      xhr.onload = function () {
         let reader: FileReader = new FileReader();
-        reader.onloadend = function() {
+        reader.onloadend = function () {
           observer.next(reader.result);
           observer.complete();
         };
