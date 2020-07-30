@@ -1,74 +1,70 @@
-# Ionic Angular Image Crop
+# :zap: Ionic Angular Image Crop
 
-App created using the [Ionic 5 framework](https://ionicframework.com/docs) to crop photos using an [Angular Image Cropper module](https://github.com/Mawi137/ngx-image-cropper). Another great tutorial from Simon Grimm at the [Ionic Academy](https://ionicacademy.com).
+* App created using the [Ionic 5 framework](https://ionicframework.com/docs) to crop photos using an [Angular Image Cropper module](https://github.com/Mawi137/ngx-image-cropper). Another great tutorial from Simon Grimm at the [Ionic Academy](https://ionicacademy.com).
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [:zap: Ionic Angular Image Crop](#zap-ionic-angular-image-crop)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-do list](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
-* Uses the Cordova camera plugin, improved with the Ionic-native camera plugin. For developement, a jpg image is used instead of the camera image. 
+* Uses the Cordova camera plugin, improved with the Ionic-native camera plugin. For developement, a jpg image is used instead of the camera image.
 
-## Screenshots
+## :camera: Screenshots
 
 ![image](./img/cropper.png)
 
-## Technologies
+## :signal_strength: Technologies
 
-* [Ionic v5.0.0](https://ionicframework.com/)
+* [Ionic v5](https://ionicframework.com/)
+* [Angular v10](https://angular.io/)
+* [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
+* [Angular RxJS Library v6](https://angular.io/guide/rx-library)
+* [ngx Image Cropper v2](https://github.com/Mawi137/ngx-image-cropper)
 
-* [Angular v8.1.2](https://angular.io/)
-
-* [Ionic/angular v4.7.1](https://www.npmjs.com/package/@ionic/angular)
-
-* [Angular RxJS Library v6.5.1](https://angular.io/guide/rx-library)
-
-* [ngx Image Cropper v2.0.2](https://github.com/Mawi137/ngx-image-cropper)
-
-## Setup
+## :floppy_disk: Setup
 
 * To start the server on _localhost://8100_ type: 'ionic serve -o'
 
-## Code Examples
+## :computer: Code Examples
 
 * Two of the image cropper methods, accessed using _@ViewChild_
 
 ```typescript
-rotateLeft() {
-    this.angularCropper.rotateLeft();
-}
-
-rotateRight() {
-    this.angularCropper.rotateRight();
+const options: CameraOptions = {
+    quality: 100,
+    destinationType: this.camera.DestinationType.DATA_URL,
+    encodingType: this.camera.EncodingType.JPEG,
+    mediaType: this.camera.MediaType.PICTURE,
+    sourceType: this.camera.PictureSourceType.CAMERA
 }
 ```
 
-## Features
+## :cool: Features
 
 * Crops and manipulates images using image cropper methods.
 
-## Status & To-do list
+## :clipboard: Status & To-do list
 
-* Status: Not working. Image not found in assets directory which prevents the image cropper from working.
-
+* Status: Compiles and displays but image not found in assets directory which prevents the image cropper from working.
 * To-do: Fix issue with image path. Look at Ionic @ionic-native/crop/ngx to see the difference in how it crops images.
 
-## Inspiration
+## :clap: Inspiration
 
 * [Simon Grimm´s Youtube video: How to Crop Images in Ionic 4 with CropperJS](https://www.youtube.com/watch?v=UnqVkzWg2W0)
-
 * [Nappd: How to add Image Cropper in ionic 4 app](https://enappd.com/blog/how-to-add-image-cropper-in-ionic-4-app/68/)
-
 * [Adding Image Cropper in Ionic 4 Apps](https://medium.com/enappd/image-cropper-in-ionic-4-7b76f1153ad9)
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)

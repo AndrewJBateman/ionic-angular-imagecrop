@@ -69,19 +69,19 @@ export class HomePage {
   }
 
   rotateLeft() {
-    this.angularCropper.rotateLeft();
+    this.angularCropper.transform.rotate.toFixed(-90);
   }
 
   rotateRight() {
-    this.angularCropper.rotateRight();
+    this.angularCropper.transform.rotate.toFixed(90);
   }
 
   flipHorizontal() {
-    this.angularCropper.flipHorizontal();
+    this.angularCropper.transform.flipH
   }
 
   flipVertical() {
-    this.angularCropper.flipVertical();
+    this.angularCropper.transform.flipV
   }
 
   move(x, y) {
