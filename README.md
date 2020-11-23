@@ -1,6 +1,7 @@
 # :zap: Ionic Angular Image Crop
 
-* App created using the [Ionic 5 framework](https://ionicframework.com/docs) to crop photos using an [Angular Image Cropper module](https://github.com/Mawi137/ngx-image-cropper). Another great tutorial from Simon Grimm at the [Ionic Academy](https://ionicacademy.com).
+* App created using the [Ionic 5 framework](https://ionicframework.com/docs) to crop photos using an [Angular Image Cropper module](https://github.com/Mawi137/ngx-image-cropper).
+* Another great tutorial from Simon Grimm at the [Ionic Academy](https://ionicacademy.com) - see [:clap: Inspiration](#clap-inspiration) below.
 
 ## :page_facing_up: Table of contents
 
@@ -18,7 +19,8 @@
 
 ## :books: General info
 
-* Uses the Cordova camera plugin, improved with the Ionic-native camera plugin. For developement, a jpg image is used instead of the camera image.
+* Uses the Cordova camera plugin, improved with the Ionic-native camera plugin.
+* This is for development, a jpg image is used instead of the camera image.
 
 ## :camera: Screenshots
 
@@ -27,18 +29,19 @@
 ## :signal_strength: Technologies
 
 * [Ionic v5](https://ionicframework.com/)
-* [Angular v10](https://angular.io/)
+* [Angular v11](https://angular.io/)
 * [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
 * [Angular RxJS Library v6](https://angular.io/guide/rx-library)
-* [ngx Image Cropper v2](https://github.com/Mawi137/ngx-image-cropper)
+* [ngx Image Cropper v3](https://github.com/Mawi137/ngx-image-cropper)
 
 ## :floppy_disk: Setup
 
+* Run `npm i` to install dependencies
 * To start the server on _localhost://8100_ type: 'ionic serve -o'
 
 ## :computer: Code Examples
 
-* Two of the image cropper methods, accessed using _@ViewChild_
+* Extract from `home.page.ts` to show camera options
 
 ```typescript
 const options: CameraOptions = {
@@ -56,7 +59,7 @@ const options: CameraOptions = {
 
 ## :clipboard: Status & To-do list
 
-* Status: Compiles and displays but image not found in assets directory which prevents the image cropper from working.
+* Status: Part-working. Compiles and displays but image not found in assets directory which prevents the image cropper from working.
 * To-do: Fix issue with image path. Look at Ionic @ionic-native/crop/ngx to see the difference in how it crops images.
 
 ## :clap: Inspiration
