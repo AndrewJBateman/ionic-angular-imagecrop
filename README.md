@@ -15,6 +15,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-do list](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -29,7 +30,7 @@
 ## :signal_strength: Technologies
 
 * [Ionic v5](https://ionicframework.com/)
-* [Angular v11](https://angular.io/)
+* [Angular v12](https://angular.io/)
 * [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
 * [Angular RxJS Library v6](https://angular.io/guide/rx-library)
 * [ngx Image Cropper v3](https://github.com/Mawi137/ngx-image-cropper)
@@ -59,8 +60,8 @@ const options: CameraOptions = {
 
 ## :clipboard: Status & To-do list
 
-* Status: Part-working. Compiles and displays but image not found in assets directory which prevents the image cropper from working.
-* To-do: Fix issue with image path. Look at Ionic @ionic-native/crop/ngx to see the difference in how it crops images.
+* Status: Working. Updated may 2021.
+* To-do: Nothing.
 
 ## :clap: Inspiration
 
@@ -68,6 +69,10 @@ const options: CameraOptions = {
 * [Nappd: How to add Image Cropper in ionic 4 app](https://enappd.com/blog/how-to-add-image-cropper-in-ionic-4-app/68/)
 * [Adding Image Cropper in Ionic 4 Apps](https://medium.com/enappd/image-cropper-in-ionic-4-7b76f1153ad9)
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
