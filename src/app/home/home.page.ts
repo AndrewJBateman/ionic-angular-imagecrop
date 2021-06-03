@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Observer } from 'rxjs';
 
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { ImageCroppedEvent, ImageCropperComponent } from 'ngx-image-cropper';
@@ -18,7 +18,7 @@ export class HomePage {
 	constructor(private camera: Camera) {}
 
 	captureImage() {
-		this.convertFileToDataURLviaFileReader(`assets\Ramen.jpg`).subscribe(
+		this.convertFileToDataURLviaFileReader(`assets/Ramen.jpg`).subscribe(
 			(base64) => {
 				// this.convertFileToDataURLviaFileReader(`http://localhost:4200/home/assets/Ramen.gif`).subscribe(base64 => {
 				this.myImage = base64;
@@ -40,7 +40,7 @@ export class HomePage {
 
 	// function to convert to base64 file
 	convertFileToDataURLviaFileReader(url: string) {
-		return Observable.create((observer) => {
+		return new Observable((observer: Observer<any>) => {
 			let xhr: XMLHttpRequest = new XMLHttpRequest();
 			xhr.onload = function () {
 				let reader: FileReader = new FileReader();
